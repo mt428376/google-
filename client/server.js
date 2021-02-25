@@ -1,9 +1,12 @@
 const express = require("express");
+const axios = require ("axios");
+const react = require ("react");
 
 const mongoose = require("mongoose");
 const routes = require("./routes");
+
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 // Configure body parsing for AJAX requests
 app.use(express.urlencoded({ extended: true }));
