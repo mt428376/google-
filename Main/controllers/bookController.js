@@ -27,5 +27,6 @@ module.exports = {
       .then(dbBook => dbBook.remove())
       .then(dbBook => res.json(dbBook))
       .catch(err => res.status(422).json(err));
-  }
+  },
+
 };
