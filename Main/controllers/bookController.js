@@ -28,5 +28,20 @@ module.exports = {
       .then(dbBook => res.json(dbBook))
       .catch(err => res.status(422).json(err));
   },
+  returnAll: function(req, res) {
+    db.Book.find(req.query)
+      .then(dbBook => res.json(dbBook))
+      .catch(err => res.status(422).json(err));
+},
+save: function(req, res) {
+  db.Book.find(req.query)
+    .then(dbBook => res.json(dbBook))
+    .catch(err => res.status(422).json(err));
+},
+delete: function(req, res) {
+  db.Book.findOneAndUpdate({ id: req.params.id }, req.body)
+    .then(dbBook => res.json(dbBook))
+    .catch(err => res.status(422).json(err));
+}
 
-};
+}
